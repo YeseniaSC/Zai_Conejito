@@ -1,0 +1,591 @@
+:root {
+    --background: #FFF3BE;
+    --brown: #5D5144;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: var(--background);
+    font-family: sans-serif;
+}
+
+
+/* ================================= */
+/* ESCENA */
+/* ================================= */
+
+.scene {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(255,255,255,.8) 0%,
+            rgba(255,255,255,.25) 38%,
+            transparent 70%
+        ),
+        var(--background);
+}
+
+
+/* ================================= */
+/* TEXTO */
+/* ================================= */
+
+.love-text {
+    position: absolute;
+
+    top: 7vh;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 20;
+
+    color: var(--brown);
+
+    font-family:
+        "Segoe Print",
+        "Bradley Hand",
+        "Comic Sans MS",
+        "Brush Script MT",
+        cursive;
+
+    font-size: clamp(38px, 8vw, 60px);
+
+    white-space: nowrap;
+
+    animation: floatText 3.5s ease-in-out infinite;
+}
+
+@keyframes floatText {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+
+/* ================================= */
+/* SVG */
+/* ================================= */
+
+.illustration {
+    width: min(100vw, 56.25vh);
+    height: min(177.78vw, 100vh);
+
+    max-width: 430px;
+    max-height: 760px;
+
+    transform: translateY(3%);
+
+    overflow: visible;
+}
+
+
+/* ================================= */
+/* CONEJITO */
+/* ================================= */
+
+.fur,
+.body,
+.head {
+    fill: url(#fur);
+    stroke: var(--brown);
+    stroke-width: 3;
+}
+
+.body,
+.head {
+    stroke-linejoin: round;
+}
+
+.belly {
+    fill: #FFFFFF;
+    opacity: .55;
+}
+
+
+/* ================================= */
+/* OREJA */
+/* ================================= */
+
+.right-ear {
+    transform: none;
+    animation: none;
+}
+
+
+/* ================================= */
+/* MEJILLAS */
+/* ================================= */
+
+.cheek {
+    fill: #F58F9B;
+    opacity: .58;
+
+    transform-box: fill-box;
+    transform-origin: center;
+
+    animation: blush 5.8s ease-in-out infinite;
+}
+
+@keyframes blush {
+
+    0%,
+    100% {
+        opacity: .45;
+        transform: scale(.96);
+    }
+
+    45%,
+    65% {
+        opacity: .72;
+        transform: scale(1.04);
+    }
+}
+
+
+/* ================================= */
+/* CARA */
+/* ================================= */
+
+.face-expression {
+    transform-box: fill-box;
+    transform-origin: center;
+
+    animation: shyFace 5.8s ease-in-out infinite;
+}
+
+@keyframes shyFace {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(2px);
+    }
+}
+
+.happy-eye {
+    fill: none;
+
+    stroke: var(--brown);
+    stroke-width: 4;
+
+    stroke-linecap: round;
+}
+
+.muzzle {
+    fill: #FFFDF8;
+}
+
+.nose {
+    fill: #6E5550;
+}
+
+.mouth {
+    fill: none;
+
+    stroke: #6E5550;
+    stroke-width: 3;
+
+    stroke-linecap: round;
+}
+
+
+/* ================================= */
+/* BRAZOS */
+/* ================================= */
+
+.arm-group {
+    transform-box: view-box;
+
+    animation-duration: 5.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+#leftArm {
+    transform-origin: 128px 326px;
+    animation-name: leftArmMove;
+}
+
+#rightArm {
+    transform-origin: 232px 326px;
+    animation-name: rightArmMove;
+}
+
+@keyframes leftArmMove {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(-9deg);
+    }
+
+    75% {
+        transform: rotate(-4deg);
+    }
+}
+
+@keyframes rightArmMove {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(9deg);
+    }
+
+    75% {
+        transform: rotate(4deg);
+    }
+}
+
+.arm {
+    fill: url(#fur);
+
+    stroke: var(--brown);
+    stroke-width: 3;
+
+    stroke-linejoin: round;
+}
+
+.paw {
+    fill: #FFFFFF;
+
+    stroke: var(--brown);
+    stroke-width: 3;
+}
+
+
+/* ================================= */
+/* PIES */
+/* ================================= */
+
+.foot {
+    fill: #FFFFFF;
+
+    stroke: var(--brown);
+    stroke-width: 3;
+
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+
+/* ================================= */
+/* RAMOS */
+/* ================================= */
+
+.bouquet {
+    transform-box: view-box;
+    transform-origin: 180px 470px;
+}
+
+
+/*
+   IMPORTANTE:
+
+   El ramo trasero hace todo el recorrido.
+   El delantero aparece desde el MISMO lado
+   donde termina el trasero.
+
+   Así no parece que desaparece y aparece de
+   la nada.
+*/
+
+#flowersBack {
+    animation: flowersBackMove 5.8s ease-in-out infinite;
+}
+
+@keyframes flowersBackMove {
+
+    /* ramo detrás */
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+
+    15% {
+        transform: translate(-18px, 0);
+        opacity: 1;
+    }
+
+    35% {
+        transform: translate(-55px, 2px);
+        opacity: 1;
+    }
+
+    /* empieza a dar la vuelta */
+    48% {
+        transform: translate(25px, 0);
+        opacity: 1;
+    }
+
+    /* se desplaza hacia la derecha */
+    55% {
+        transform: translate(55px, 0);
+        opacity: .85;
+    }
+
+    /*
+       Aquí el ramo trasero ya está
+       prácticamente en la posición
+       desde donde aparecerá el delantero.
+    */
+    62% {
+        transform: translate(68px, 0);
+        opacity: .25;
+    }
+
+    68% {
+        transform: translate(68px, 0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+
+/*
+   El ramo delantero NO aparece desde cero.
+
+   Empieza exactamente a la derecha,
+   donde desaparece el ramo trasero,
+   y desde ahí se desliza hacia el centro.
+*/
+
+#flowersFront {
+    opacity: 0;
+
+    animation: flowersFrontMove 5.8s ease-in-out infinite;
+}
+
+@keyframes flowersFrontMove {
+
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+
+    48% {
+        transform: translate(68px, 0);
+        opacity: 0;
+    }
+
+    55% {
+        transform: translate(68px, 0);
+        opacity: .25;
+    }
+
+    62% {
+        transform: translate(55px, 0);
+        opacity: .65;
+    }
+
+    68% {
+        transform: translate(30px, 0);
+        opacity: .9;
+    }
+
+    75% {
+        transform: translate(8px, 0);
+        opacity: 1;
+    }
+
+    82% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+
+/* ================================= */
+/* ESTRELLITAS */
+/* ================================= */
+
+#sparkles path {
+    fill: #FFFFFF;
+
+    transform-box: fill-box;
+    transform-origin: center;
+
+    animation:
+        sparkle 5.8s ease-in-out infinite;
+}
+
+#sparkles path:nth-child(1) {
+    animation-delay: .2s;
+}
+
+#sparkles path:nth-child(2) {
+    animation-delay: .7s;
+}
+
+#sparkles path:nth-child(3) {
+    animation-delay: 1.1s;
+}
+
+@keyframes sparkle {
+
+    0%,
+    100% {
+        opacity: .2;
+        transform: scale(.65) rotate(0deg);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1) rotate(20deg);
+    }
+
+    55% {
+        opacity: .8;
+        transform: scale(.85) rotate(40deg);
+    }
+
+    75% {
+        opacity: 1;
+        transform: scale(1.05) rotate(60deg);
+    }
+}
+
+
+/* ================================= */
+/* BOTÓN */
+/* ================================= */
+
+#replay {
+    position: absolute;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.7);
+
+    color: var(--brown);
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    z-index: 30;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+}
+
+#replay:hover {
+    transform: rotate(-30deg) scale(1.05);
+
+    background: rgba(255,255,255,.95);
+}
+
+
+/* ================================= */
+/* RESPONSIVE */
+/* ================================= */
+
+@media (max-width: 500px) {
+
+    .love-text {
+        top: 6vh;
+        font-size: 42px;
+    }
+
+    .illustration {
+        transform: translateY(4%);
+    }
+
+    #replay {
+        right: 14px;
+        bottom: 14px;
+    }
+}
+
+@media (max-height: 650px) {
+
+    .love-text {
+        top: 3vh;
+        font-size: 36px;
+    }
+
+    .illustration {
+        transform: translateY(6%);
+    }
+}
+
+
+/* ================================= */
+/* REDUCED MOTION */
+/* ================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .love-text,
+    .cheek,
+    .face-expression,
+    .arm-group,
+    #flowersBack,
+    #flowersFront,
+    #sparkles path {
+
+        animation: none !important;
+    }
+}

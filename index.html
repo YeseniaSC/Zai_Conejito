@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>I love u</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="scene">
+
+    <div class="love-text">I love u ❤️</div>
+
+    <svg
+        class="illustration"
+        viewBox="0 0 360 640"
+        preserveAspectRatio="xMidYMid meet"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+
+        <defs>
+
+            <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="4"/>
+            </filter>
+
+            <radialGradient id="fur" cx="50%" cy="40%" r="70%">
+                <stop offset="0%" stop-color="#FFFFFF"/>
+                <stop offset="100%" stop-color="#F1EEE6"/>
+            </radialGradient>
+
+            <linearGradient id="earPink" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFDDE2"/>
+                <stop offset="100%" stop-color="#F3AEB9"/>
+            </linearGradient>
+
+            <linearGradient id="petal" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFF36A"/>
+                <stop offset="100%" stop-color="#F4C928"/>
+            </linearGradient>
+
+            <linearGradient id="leaf" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#8BCF62"/>
+                <stop offset="100%" stop-color="#4C9C4B"/>
+            </linearGradient>
+
+        </defs>
+
+
+        <!-- SOMBRA -->
+        <ellipse
+            cx="180"
+            cy="526"
+            rx="82"
+            ry="13"
+            fill="#B8A66C"
+            opacity=".25"
+            filter="url(#shadow)"
+        />
+
+
+        <!-- ================================= -->
+        <!-- RAMO DETRÁS -->
+        <!-- ================================= -->
+
+        <g id="flowersBack" class="bouquet">
+
+            <path
+                d="M180 470 C165 425 143 382 116 333"
+                fill="none"
+                stroke="#5D9E4B"
+                stroke-width="5"
+                stroke-linecap="round"
+            />
+
+            <path
+                d="M180 470 C184 416 205 374 239 330"
+                fill="none"
+                stroke="#5D9E4B"
+                stroke-width="5"
+                stroke-linecap="round"
+            />
+
+            <path
+                d="M180 470 C174 415 174 375 178 326"
+                fill="none"
+                stroke="#5D9E4B"
+                stroke-width="5"
+                stroke-linecap="round"
+            />
+
+            <ellipse
+                cx="137"
+                cy="386"
+                rx="26"
+                ry="11"
+                transform="rotate(-35 137 386)"
+                fill="url(#leaf)"
+            />
+
+            <ellipse
+                cx="218"
+                cy="382"
+                rx="26"
+                ry="11"
+                transform="rotate(35 218 382)"
+                fill="url(#leaf)"
+            />
+
+            <ellipse
+                cx="170"
+                cy="365"
+                rx="23"
+                ry="10"
+                transform="rotate(-10 170 365)"
+                fill="url(#leaf)"
+            />
+
+            <g transform="translate(115 322)">
+                <circle cx="0" cy="-17" r="15" fill="url(#petal)"/>
+                <circle cx="14" cy="-8" r="15" fill="url(#petal)"/>
+                <circle cx="14" cy="8" r="15" fill="url(#petal)"/>
+                <circle cx="0" cy="17" r="15" fill="url(#petal)"/>
+                <circle cx="-14" cy="8" r="15" fill="url(#petal)"/>
+                <circle cx="-14" cy="-8" r="15" fill="url(#petal)"/>
+                <circle cx="0" cy="0" r="10" fill="#D89D25"/>
+            </g>
+
+            <g transform="translate(178 315)">
+                <circle cx="0" cy="-17" r="15" fill="url(#petal)"/>
+                <circle cx="14" cy="-8" r="15" fill="url(#petal)"/>
+                <circle cx="14" cy="8" r="15" fill="url(#petal)"/>
+                <circle cx="0" cy="17" r="15" fill="url(#petal)"/>
+                <circle cx="-14" cy="8" r="15" fill="url(#petal)"/>
+                <circle cx="-14" cy="-8" r="15" fill="url(#petal)"/>
+                <circle cx="0" cy="0" r="10" fill="#D89D25"/>
+            </g>
+
+            <g transform="translate(241 325)">
+                <circle cx="0" cy="-17" r="15" fill="url(#petal)"/>
+                <circle cx="14" cy="-8" r="15" fill="url(#petal)"/>
+                <circle cx="14" cy="8" r="15" fill="url(#petal)"/>
+                <circle cx="0" cy="17" r="15" fill="url(#petal)"/>
+                <circle cx="-14" cy="8" r="15" fill="url(#petal)"/>
+                <circle cx="-14" cy="-8" r="15" fill="url(#petal)"/>
+                <circle cx="0" cy="0" r="10" fill="#D89D25"/>
+            </g>
+
+        </g>
+
+
+        <!-- ================================= -->
+        <!-- CONEJITO -->
+        <!-- ================================= -->
+
+        <g id="bunny">
+
+            <!-- cola -->
+            <ellipse
+                cx="263"
+                cy="414"
+                rx="22"
+                ry="22"
+                fill="url(#fur)"
+                stroke="#5D5144"
+                stroke-width="3"
+            />
+
+
+            <!-- cuerpo -->
+            <path
+                class="body"
+                d="
+                    M180 282
+                    C143 282 120 304 119 351
+                    C118 401 119 462 143 492
+                    C155 507 167 516 180 518
+                    C193 516 205 507 217 492
+                    C241 462 242 401 241 351
+                    C240 304 217 282 180 282
+                    Z
+                "
+                fill="url(#fur)"
+                stroke="#5D5144"
+                stroke-width="3"
+            />
+
+
+            <!-- pancita -->
+            <ellipse
+                class="belly"
+                cx="180"
+                cy="403"
+                rx="52"
+                ry="78"
+                fill="#FFFFFF"
+                opacity=".55"
+            />
+
+
+            <!-- oreja izquierda -->
+            <path
+                d="
+                    M132 172
+                    C109 112 112 42 142 31
+                    C166 23 169 65 162 117
+                    C158 147 151 168 145 181
+                    Z
+                "
+                fill="url(#fur)"
+                stroke="#5D5144"
+                stroke-width="3"
+            />
+
+            <path
+                d="
+                    M135 151
+                    C122 104 124 57 142 50
+                    C153 45 155 72 151 108
+                    C149 128 144 143 140 156
+                    Z
+                "
+                fill="url(#earPink)"
+            />
+
+
+            <!-- oreja derecha -->
+            <g id="rightEar" class="right-ear">
+
+                <path
+                    d="
+                        M228 172
+                        C251 112 248 42 218 31
+                        C194 23 191 65 198 117
+                        C202 147 209 168 215 181
+                        Z
+                    "
+                    fill="url(#fur)"
+                    stroke="#5D5144"
+                    stroke-width="3"
+                />
+
+                <path
+                    d="
+                        M225 151
+                        C238 104 236 57 218 50
+                        C207 45 205 72 209 108
+                        C211 128 216 143 220 156
+                        Z
+                    "
+                    fill="url(#earPink)"
+                />
+
+            </g>
+
+
+            <!-- cabeza -->
+            <path
+                class="head"
+                d="
+                    M180 132
+                    C126 132 102 164 104 217
+                    C106 268 135 294 180 296
+                    C225 294 254 268 256 217
+                    C258 164 234 132 180 132
+                    Z
+                "
+                fill="url(#fur)"
+                stroke="#5D5144"
+                stroke-width="3"
+            />
+
+
+            <!-- mejillas -->
+            <ellipse
+                class="cheek"
+                cx="136"
+                cy="235"
+                rx="25"
+                ry="17"
+            />
+
+            <ellipse
+                class="cheek"
+                cx="224"
+                cy="235"
+                rx="25"
+                ry="17"
+            />
+
+
+            <!-- expresión -->
+            <g id="faceExpression" class="face-expression">
+
+                <path
+                    class="happy-eye"
+                    d="M141 207 Q150 198 159 207"
+                />
+
+                <path
+                    class="happy-eye"
+                    d="M201 207 Q210 198 219 207"
+                />
+
+            </g>
+
+
+            <!-- hocico -->
+            <ellipse
+                class="muzzle"
+                cx="180"
+                cy="237"
+                rx="31"
+                ry="25"
+            />
+
+
+            <!-- nariz -->
+            <path
+                class="nose"
+                d="
+                    M172 230
+                    Q180 224 188 230
+                    Q186 239 180 240
+                    Q174 239 172 230
+                    Z
+                "
+            />
+
+
+            <!-- boca -->
+            <path
+                class="mouth"
+                d="
+                    M180 239
+                    C180 246 172 248 169 251
+                    M180 239
+                    C180 246 188 248 191 251
+                "
+            />
+
+
+            <!-- ================================= -->
+            <!-- BRAZOS -->
+            <!-- ================================= -->
+
+            <g id="arms">
+
+                <g id="leftArm" class="arm-group">
+
+                    <path
+                        class="arm"
+                        d="
+                            M128 326
+                            C118 331 109 343 105 357
+                            C100 374 103 390 112 401
+                            C120 411 132 409 137 400
+                            C142 391 138 381 134 372
+                            C130 362 134 352 143 344
+                            C148 340 153 336 157 332
+                            C151 326 140 322 128 326
+                            Z
+                        "
+                    />
+
+                    <ellipse
+                        class="paw"
+                        cx="120"
+                        cy="397"
+                        rx="17"
+                        ry="13"
+                    />
+
+                </g>
+
+
+                <g id="rightArm" class="arm-group">
+
+                    <path
+                        class="arm"
+                        d="
+                            M232 326
+                            C242 331 251 343 255 357
+                            C260 374 257 390 248 401
+                            C240 411 228 409 223 400
+                            C218 391 222 381 226 372
+                            C230 362 226 352 217 344
+                            C212 340 207 336 203 332
+                            C209 326 220 322 232 326
+                            Z
+                        "
+                    />
+
+                    <ellipse
+                        class="paw"
+                        cx="240"
+                        cy="397"
+                        rx="17"
+                        ry="13"
+                    />
+
+                </g>
+
+            </g>
+
+
+            <!-- ================================= -->
+            <!-- PIES -->
+            <!-- ================================= -->
+
+            <ellipse
+                class="foot"
+                cx="146"
+                cy="507"
+                rx="38"
+                ry="19"
+            />
+
+            <ellipse
+                class="foot"
+                cx="214"
+                cy="507"
+                rx="38"
+                ry="19"
+            />
+
+        </g>
+
+
+        <!-- ================================= -->
+        <!-- RAMO DELANTE -->
+        <!-- ================================= -->
+
+        <g id="flowersFront" class="bouquet">
+
+            <path
+                d="M180 470 C165 425 143 382 116 333"
+                fill="none"
+                stroke="#5D9E4B"
+                stroke-width="5"
+                stroke-linecap="round"
+            />
+
+            <path
+                d="M180 470 C184 416 205 374 239 330"
+                fill="none"
+                stroke="#5D9E4B"
+                stroke-width="5"
+                stroke-linecap="round"
+            />
+
+            <path
+                d="M180 470 C174 415 174 375 178 326"
+                fill="none"
+                stroke="#5D9E4B"
+                stroke-width="5"
+                stroke-linecap="round"
+            />
+
+            <ellipse
+                cx="137"
+                cy="386"
+                rx="26"
+                ry="11"
+                transform="rotate(-35 137 386)"
+                fill="url(#leaf)"
+            />
+
+            <ellipse
+                cx="218"
+                cy="382"
+                rx="26"
+                ry="11"
+                transform="rotate(35 218 382)"
+                fill="url(#leaf)"
+            />
+
+            <ellipse
+                cx="170"
+                cy="365"
+                rx="23"
+                ry="10"
+                transform="rotate(-10 170 365)"
+                fill="url(#leaf)"
+            />
+
+            <g transform="translate(115 322)">
+                <circle cx="0" cy="-17" r="15" fill="url(#petal)"/>
+                <circle cx="14" cy="-8" r="15" fill="url(#petal)"/>
+                <circle cx="14" cy="8" r="15" fill="url(#petal)"/>
+                <circle cx="0" cy="17" r="15" fill="url(#petal)"/>
+                <circle cx="-14" cy="8" r="15" fill="url(#petal)"/>
+                <circle cx="-14" cy="-8" r="15" fill="url(#petal)"/>
+                <circle cx="0" cy="0" r="10" fill="#D89D25"/>
+            </g>
+
+            <g transform="translate(178 315)">
+                <circle cx="0" cy="-17" r="15" fill="url(#petal)"/>
+                <circle cx="14" cy="-8" r="15" fill="url(#petal)"/>
+                <circle cx="14" cy="8" r="15" fill="url(#petal)"/>
+                <circle cx="0" cy="17" r="15" fill="url(#petal)"/>
+                <circle cx="-14" cy="8" r="15" fill="url(#petal)"/>
+                <circle cx="-14" cy="-8" r="15" fill="url(#petal)"/>
+                <circle cx="0" cy="0" r="10" fill="#D89D25"/>
+            </g>
+
+            <g transform="translate(241 325)">
+                <circle cx="0" cy="-17" r="15" fill="url(#petal)"/>
+                <circle cx="14" cy="-8" r="15" fill="url(#petal)"/>
+                <circle cx="14" cy="8" r="15" fill="url(#petal)"/>
+                <circle cx="0" cy="17" r="15" fill="url(#petal)"/>
+                <circle cx="-14" cy="8" r="15" fill="url(#petal)"/>
+                <circle cx="-14" cy="-8" r="15" fill="url(#petal)"/>
+                <circle cx="0" cy="0" r="10" fill="#D89D25"/>
+            </g>
+
+        </g>
+
+
+        <!-- ================================= -->
+        <!-- ESTRELLAS -->
+        <!-- ================================= -->
+
+        <g id="sparkles">
+
+            <path
+                d="M77 306 l4 11 11 4 -11 4 -4 11 -4-11 -11-4 11-4Z"
+            />
+
+            <path
+                d="M284 289 l3 8 8 3 -8 3 -3 8 -3-8 -8-3 8-3Z"
+            />
+
+            <path
+                d="M289 451 l3 8 8 3 -8 3 -3 8 -3-8 -8-3 8-3Z"
+            />
+
+        </g>
+
+    </svg>
+
+
+    <button id="replay" aria-label="Reproducir de nuevo">
+        ↻
+    </button>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
