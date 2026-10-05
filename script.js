@@ -6,7 +6,7 @@ const frontBouquet =
 
 const replay =
     document.getElementById("replay");
-
+  
 const leftArm =
     document.getElementById("leftArm");
 
